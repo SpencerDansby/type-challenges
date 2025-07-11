@@ -1,1 +1,3 @@
-type TupleToObject<T extends readonly any[]> = any
+type TupleToObject<K extends readonly PropertyKey[]> = {
+  [P in K[number]]: P
+}
